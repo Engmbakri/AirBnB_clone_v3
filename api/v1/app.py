@@ -2,7 +2,7 @@
 """Flask server (variable app)
 """
 
-
+import sys
 from flask import Flask, jsonify
 from models import storage
 from os import getenv
@@ -22,7 +22,7 @@ def downtear(self):
 @app.errorhandler(404)
 def page_not_found(error):
     '''return render_template'''
-    return jsonify('error='Not found'), 404
+    return jsonify('error'=='Not found'), 404
 
 
 if __name__ == "__main__":
